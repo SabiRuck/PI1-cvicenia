@@ -1,0 +1,29 @@
+#17.
+import tkinter as tk, random as r
+
+canvas = tk.Canvas()
+canvas.pack()
+
+d = 10
+
+for i in range(10000):
+    x = r.randint(10, 350)
+    y = r.randint(10, 250)
+
+    if y < 90:
+        color = "black"
+    elif y < 170:
+        color = "red"
+    else:
+        color = "gold"
+    canvas.create_oval(x, y, x + d, y + d, fill=color, outline="")
+
+
+
+
+
+
+
+
+
+canvas.mainloop()
